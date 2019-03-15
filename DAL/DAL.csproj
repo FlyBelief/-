@@ -42,6 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CP_CommentDAL.cs" />
+    <Compile Include="CP_IndentDAL.cs" />
+    <Compile Include="CP_StealDAL.cs" />
+    <Compile Include="CP_VipDAL.cs" />
+    <Compile Include="DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

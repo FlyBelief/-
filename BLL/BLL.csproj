@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CP_CommentBLL.cs" />
+    <Compile Include="CP_IndentBLL.cs" />
+    <Compile Include="CP_StealBLL.cs" />
+    <Compile Include="CP_VipBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

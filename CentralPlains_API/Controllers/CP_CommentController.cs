@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 using System.Data;
-using DAL;
+using BLL;
+using Model;
 
-namespace BLL
+namespace CentralPlains_API.Controllers
 {
-    public class CP_CommentBLL
+    public class CP_CommentController : ApiController
     {
-        CP_CommentDAL dal = new CP_CommentDAL();
+        CP_CommentBLL dal = new CP_CommentBLL();
         /// <summary>
         /// 显示评论信息
         /// </summary>
@@ -26,7 +27,7 @@ namespace BLL
         /// <returns></returns>
         public int PostCp_Comment(CP_Comment m)
         {
-            return dal.PostCp_Comment(m); 
+            return dal.PostCp_Comment(m);
         }
         /// <summary>
         /// 删除评论信息
