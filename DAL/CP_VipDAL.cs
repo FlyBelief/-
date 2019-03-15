@@ -9,51 +9,51 @@ using System.Threading.Tasks;
 namespace DAL
 {
     /// <summary>
-    /// 评论表(CP_Comment)
+    /// 8. Vip表(CP_Vip)
     /// </summary>
-    public class CP_CommentDAL
+    public class CP_VipDAL
     {
         /// <summary>
-        /// 显示评论信息
+        /// 显示Vip表
         /// </summary>
         /// <returns></returns>
-        public DataTable GetCp_Comment()
+        public DataTable GetCP_Vip()
         {
-            string sql = "select * from Cp_Comment";
+            string sql = "select * from CP_Vip";
             DataTable dt = DBhelper.GetTable(sql);
             return dt;
         }
         /// <summary>
-        /// 添加评论信息
+        /// 添加Vip信息
         /// </summary>
+        /// <param name="Vip"></param>
         /// <returns></returns>
-        public int PostCp_Comment(CP_Comment m)
+        public int PostCP_Vip(CP_Vip  Vip)
         {
-            string sql = $"insert into Cp_Comment values('{m.C_Name}','{m.C_Describe}','{m.H_Id}','{m.HH_Id}')";
-            int n = DBhelper.ExecuteNonQuery(sql);
-            return n; 
-        }
-        /// <summary>
-        /// 删除评论信息
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public int DeleteCp_Comment(string id )
-        {
-            string sql = "delete from Cp_Comment where C_Id = " + id;
+            string sql = $"insert into CP_Vip values ('{Vip.V_Path}','{Vip.V_Name}')";
             int n = DBhelper.ExecuteNonQuery(sql);
             return n;
         }
         /// <summary>
-        /// 修改评论信息
+        /// 删除VIP信息 
         /// </summary>
         /// <returns></returns>
-        public int PutCp_Comment(CP_Comment m)
+        public int DeleteCP_Vip(string id)
         {
-            string sql = $"update CP_Comment set C_Name={m.C_Name},C_Describe={m.C_Describe},H_Id={m.H_Id},HH_Id={m.HH_Id} where C_id="+m.C_Id;
+            string sql = "delete from CP_Vip where V_Id="+id;
             int n = DBhelper.ExecuteNonQuery(sql);
             return n;
         }
-
+        /// <summary>
+        /// 修改VIP信息 
+        /// </summary>
+        /// <param name="Vip"></param>
+        /// <returns></returns>
+        public int PutCP_Vip(CP_Vip Vip)
+        {
+            string sql = $"update CP_Vip set V_Name={Vip.V_Name},V_Path={Vip.V_Path} where V_Id={Vip.V_Id}";
+            int n = DBhelper.ExecuteNonQuery(sql);
+            return n;
+        }
     }
 }

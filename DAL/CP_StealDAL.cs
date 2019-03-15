@@ -9,51 +9,50 @@ using System.Threading.Tasks;
 namespace DAL
 {
     /// <summary>
-    /// 评论表(CP_Comment)
+    /// 盗窃表(CP_Steal) 
     /// </summary>
-    public class CP_CommentDAL
+    public class CP_StealDAL
     {
         /// <summary>
-        /// 显示评论信息
+        /// 显示盗窃表(CP_Steal) 
         /// </summary>
         /// <returns></returns>
-        public DataTable GetCp_Comment()
+        public DataTable GetCP_Steal()
         {
-            string sql = "select * from Cp_Comment";
+            string sql = "select * from CP_Steal";
             DataTable dt = DBhelper.GetTable(sql);
             return dt;
         }
         /// <summary>
-        /// 添加评论信息
+        /// 添加盗窃信息
         /// </summary>
         /// <returns></returns>
-        public int PostCp_Comment(CP_Comment m)
+        public int PostCP_Steal(CP_Steal St)
         {
-            string sql = $"insert into Cp_Comment values('{m.C_Name}','{m.C_Describe}','{m.H_Id}','{m.HH_Id}')";
+            string sql = $"insert into CP_Steal values ('{St.SS_Name}','{St.SS_Phone}','{St.SS_Time}')";
             int n = DBhelper.ExecuteNonQuery(sql);
-            return n; 
+            return n; ;
         }
         /// <summary>
-        /// 删除评论信息
+        /// 删除盗窃信息
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
-        public int DeleteCp_Comment(string id )
+        public int DeleteCP_Steal(string id)
         {
-            string sql = "delete from Cp_Comment where C_Id = " + id;
+            string sql = "delete from CP_Steal where  SS_Id="+id;
             int n = DBhelper.ExecuteNonQuery(sql);
             return n;
         }
         /// <summary>
-        /// 修改评论信息
+        /// 修改盗窃信息
         /// </summary>
+        /// <param name="St"></param>
         /// <returns></returns>
-        public int PutCp_Comment(CP_Comment m)
+        public int PutCP_Steal(CP_Steal St)
         {
-            string sql = $"update CP_Comment set C_Name={m.C_Name},C_Describe={m.C_Describe},H_Id={m.H_Id},HH_Id={m.HH_Id} where C_id="+m.C_Id;
+            string sql = $"update CP_Steal set SS_Name={St.SS_Name},SS_Phone={St.SS_Phone},SS_Time={St.SS_Time} where  SS_Id={St.SS_Id}";
             int n = DBhelper.ExecuteNonQuery(sql);
             return n;
         }
-
-    }
+     }
 }
