@@ -51,5 +51,13 @@ namespace Model
         /// 创建时间
         /// </summary>
         public DateTime U_Time { get; set; }
+        /// <summary>
+        /// 每天发房数量
+        /// </summary>
+        public int U_day { get; set; }
+        /// <summary>
+        /// 每月发房数量
+        /// </summary>
+        public int U_Month { get; set; }
     }
 }
