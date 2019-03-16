@@ -85,6 +85,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CP_CommentController.cs" />
+    <Compile Include="Controllers\CP_HomeController.cs" />
+    <Compile Include="Controllers\CP_HousesController.cs" />
+    <Compile Include="Controllers\CP_IndentController.cs" />
+    <Compile Include="Controllers\CP_StealController.cs" />
+    <Compile Include="Controllers\CP_VipController.cs" />
+    <Compile Include="Controllers\TPK_APIController.cs" />
     <Compile Include="Controllers\CP_IdentityController.cs" />
     <Compile Include="Controllers\CP_ProvinceController.cs" />
     <Compile Include="Controllers\CP_UsersController.cs" />
