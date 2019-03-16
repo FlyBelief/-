@@ -27,7 +27,7 @@ namespace DAL
         public DataTable CP_ProvinceShow()
         {
             string sql = "select * from CP_Province";
-            return DBHelper.GetDataTable(sql);
+            return DBHelper.GetTable(sql);
         }
         /// <summary>
         /// 省份表删除

@@ -20,7 +20,7 @@ namespace DAL
         public DataTable GetCP_Steal()
         {
             string sql = "select * from CP_Steal";
-            DataTable dt = DBhelper.GetTable(sql);
+            DataTable dt = DBHelper.GetTable(sql);
             return dt;
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace DAL
         public int PostCP_Steal(CP_Steal St)
         {
             string sql = $"insert into CP_Steal values ('{St.SS_Name}','{St.SS_Phone}','{St.SS_Time}')";
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n; ;
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace DAL
         public int DeleteCP_Steal(string id)
         {
             string sql = "delete from CP_Steal where  SS_Id="+id;
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n;
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace DAL
         public int PutCP_Steal(CP_Steal St)
         {
             string sql = $"update CP_Steal set SS_Name={St.SS_Name},SS_Phone={St.SS_Phone},SS_Time={St.SS_Time} where  SS_Id={St.SS_Id}";
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n;
         }
      }

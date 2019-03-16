@@ -10,7 +10,7 @@ using System.Reflection;
 
 namespace DAL
 {
-    public  class DBhelper
+    public  class DBHelper
     {
         public static string connStr = "Data Source = 10.1.152.17,1433; Initial Catalog = CentralPlains; User ID = sa";  
         //创建公用的SqlConnecttion
@@ -103,10 +103,10 @@ namespace DAL
         }
 
     }
-    public class DBhelper<T> where T : new() {
+    public class DBHelper<T> where T : new() {
         public static List<T> GetList(string sql)
         {
-            DataTable dt = DBhelper.GetTable(sql);
+            DataTable dt = DBHelper.GetTable(sql);
             List<T> list = new List<T>();// 定义集合
 
             Type type = typeof(T); // 获得此模型的类型

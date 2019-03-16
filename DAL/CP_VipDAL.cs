@@ -20,7 +20,7 @@ namespace DAL
         public DataTable GetCP_Vip()
         {
             string sql = "select * from CP_Vip";
-            DataTable dt = DBhelper.GetTable(sql);
+            DataTable dt = DBHelper.GetTable(sql);
             return dt;
         }
         /// <summary>
@@ -31,7 +31,7 @@ namespace DAL
         public int PostCP_Vip(CP_Vip  Vip)
         {
             string sql = $"insert into CP_Vip values ('{Vip.V_Path}','{Vip.V_Name}')";
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n;
         }
         /// <summary>
@@ -41,7 +41,7 @@ namespace DAL
         public int DeleteCP_Vip(string id)
         {
             string sql = "delete from CP_Vip where V_Id="+id;
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n;
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace DAL
         public int PutCP_Vip(CP_Vip Vip)
         {
             string sql = $"update CP_Vip set V_Name={Vip.V_Name},V_Path={Vip.V_Path} where V_Id={Vip.V_Id}";
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n;
         }
     }

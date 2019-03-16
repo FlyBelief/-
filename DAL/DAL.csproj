@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="CP_IdentityDal.cs" />
     <Compile Include="CP_ProvinceDal.cs" />
-    <Compile Include="DBHelper.cs" />
     <Compile Include="CP_CommentDAL.cs" />
     <Compile Include="CP_HomeDal.cs" />
     <Compile Include="CP_HousesDal.cs" />

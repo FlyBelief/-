@@ -27,7 +27,7 @@ namespace DAL
         public DataTable CP_UsersShow()
         {
             string sql = "select * from CP_Users";
-            return DBHelper.GetDataTable(sql);
+            return DBHelper.GetTable(sql);
         }
         /// <summary>
         /// 用户表删除
@@ -66,7 +66,7 @@ namespace DAL
         public DataTable CP_IdentityShow()
         {
             string sql = "select * from CP_Identity";
-            return DBHelper.GetDataTable(sql);
+            return DBHelper.GetTable(sql);
         }
         /// <summary>
         /// 身份表删除

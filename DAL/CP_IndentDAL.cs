@@ -20,7 +20,7 @@ namespace DAL
         public DataTable GetCP_Indent()
         {
             string sql = "select * from CP_Indent";
-            DataTable dt = DBhelper.GetTable(sql);
+            DataTable dt = DBHelper.GetTable(sql);
             return dt;
         }
         /// <summary>
@@ -31,7 +31,7 @@ namespace DAL
         public int PostCP_Indent(CP_Indent In)
         {
             string sql = $"insert into CP_Indent values ('{In.H_Id}','{In.II_Name}','{In.II_Time}')";
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n;
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace DAL
         public int DeleteCP_Indent(string id)
         {
             string sql = "delete  from CP_Indent where II_Id="+id;
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n;
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace DAL
         public int PutCP_Indent(CP_Indent In)
         {
             string sql = $"update CP_Indent set H_Id={In.H_Id},II_Name={In.II_Name},II_Time={In.II_Time} where II_Id={In.II_Id}";
-            int n = DBhelper.ExecuteNonQuery(sql);
+            int n = DBHelper.ExecuteNonQuery(sql);
             return n;
         }
     }
