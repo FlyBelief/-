@@ -42,10 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CP_CommentBLL.cs" />
+    <Compile Include="CP_HomeBll.cs" />
+    <Compile Include="CP_HousesBll.cs" />
     <Compile Include="CP_IndentBLL.cs" />
     <Compile Include="CP_StealBLL.cs" />
     <Compile Include="CP_VipBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TPK_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

@@ -20,21 +20,17 @@ namespace Model
         /// </summary>
         public string HH_Path { get; set; }
         /// <summary>
-        /// 楼盘名称
+        /// 联系人名称
         /// </summary>
         public string HH_Name { get; set; }
         /// <summary>
-        /// 第几层
+        /// 联系人电话
         /// </summary>
-        public int HH_Now { get; set; }
+        public string HH_Phone { get; set; }
         /// <summary>
         /// 共几层
         /// </summary>
         public int HH_Sum { get; set; }
-        /// <summary>
-        /// 到几层
-        /// </summary>
-        public int HH_Low { get; set; }
         /// <summary>
         /// 省份编号 
         /// </summary>

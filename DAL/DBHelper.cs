@@ -10,9 +10,9 @@ using System.Reflection;
 
 namespace DAL
 {
-    class DBhelper
+    public  class DBhelper
     {
-        static string connStr = "Data Source=10.1.152.17,1433;Initial Catalog=CentralPlains;User ID=sa ,pwd=123456";
+        public static string connStr = "Data Source = 10.1.152.17,1433; Initial Catalog = CentralPlains; User ID = sa";  
         //创建公用的SqlConnecttion
         public static SqlConnection sqlconn = new SqlConnection(connStr);
         //创建公用的SqlCommand
@@ -85,12 +85,11 @@ namespace DAL
         }
 
 
-        public static DataTable GetTable(string sql)
-        {
+        public static DataTable GetTable(string sql) {
             DataTable dt = new DataTable();
             sqlcmd.Connection = sqlconn;
             sqlcmd.CommandText = sql;
-            SqlDataAdapter sqlada = new SqlDataAdapter(sqlcmd);
+            SqlDataAdapter sqlada=new SqlDataAdapter(sqlcmd);
             try
             {
                 sqlada.Fill(dt);
@@ -104,8 +103,7 @@ namespace DAL
         }
 
     }
-    public class DBhelper<T> where T : new()
-    {
+    public class DBhelper<T> where T : new() {
         public static List<T> GetList(string sql)
         {
             DataTable dt = DBhelper.GetTable(sql);
